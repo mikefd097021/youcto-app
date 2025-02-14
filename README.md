@@ -9,6 +9,22 @@ A GPIO testing application for aarch64 platform.
 
 ## Build Instructions
 
+### Option 1: Using Docker (Recommended)
+
+1. Build the Docker image:
+```bash
+docker build -t youcto-builder .
+```
+
+2. Compile the application:
+```bash
+docker run --rm -v ${PWD}:/app youcto-builder
+```
+
+The compiled `launcher` executable will be available in your current directory.
+
+### Option 2: Native Build
+
 1. Install cross-compilation tools on Ubuntu/Debian host:
 ```bash
 sudo apt-get update
